@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticker: MyString
+  name: MyString
+  last_price: 9.99
+  last_trade: 2015-10-08 16:00:27
+  stock_exchange: MyString
+
+two:
+  ticker: MyString
+  name: MyString
+  last_price: 9.99
+  last_trade: 2015-10-08 16:00:27
+  stock_exchange: MyString
