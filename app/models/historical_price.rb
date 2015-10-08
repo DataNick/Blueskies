@@ -1,3 +1,3 @@
 class HistoricalPrice < ActiveRecord::Base
-  belongs_to :stock_id
+  belongs_to :stock
 end
