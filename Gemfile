@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+require 'open-uri'
 
 gem 'rails', '4.2.1'
 gem 'pg'
