@@ -1,17 +1,28 @@
 require 'rails_helper'
 require './lib/stock_quote_fetcher/stock_quote_fetcher.rb'
 
-RSpec.describe StockQuoteFetcher, type: :model do
-  describe "stock_quote_fetcher new method" do
-    subject {StockQuoteFetcher.new()}
-    it { should be a new(StockQuoteFetcher) }
-  end
+RSpec.describe StockQuoteFetcher do
+  # describe "stock_quote_fetcher new method" do
+  #   subject {StockQuoteFetcher.new()}
+  #   it { should be_a_new(StockQuoteFetcher) }
+  # end
 
-  describe "stock_quote_fetcher single argument" do
-    subject { StockQuoteFetcher.new(Stock.new(ticker: "GOOG")).stock_fetch}
-    it {should be new(Hash("GOOG" =>{name: String.new, price: bigdecimal.new, date: Time.new} ))}
+  # describe "stock_quote_fetcher single argument" do
+  #   stock=Stock.new(ticker: "GOOG")
+  #   sqf=StockQuoteFetcher.new(stock)
+  #   subject {sqf.stock_fetch}
+  #   it {should be (Hash("GOOG" =>{name: "GOOG", price: 99, date: Time.now} ))}
+  # end
+    describe "stock_quote_fetcher single argument" do
+    stock=Stock.new(ticker: "GOOG")
+    sqf=StockQuoteFetcher.new(stock)
+    subject {sqf.stock_fetch}
+    it {should be [{ticker: "GOOG",
+      name: "Google Inc.", 
+      last_price: BigDecimal.new("663.50"), 
+      last_trade: DateTime.now, 
+      stock_exchange: String.new}] }
   end
-
 end
 
 
