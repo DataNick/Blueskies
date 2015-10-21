@@ -9,6 +9,7 @@ class StockQuoteFetcher
     yahoo_tickers = @stocks.map {|x| "'" + x.ticker + "'"}.join(', ')
     puts "LOOKHERE: #{yahoo_tickers.class}"
     if yahoo_tickers.length > 0
+      puts "fetching data from yahoo api..."
       url = 'https://query.yahooapis.com/v1/public/yql?q='
       url += URI.encode("SELECT * FROM yahoo.finance.quotes WHERE symbol IN (#{yahoo_tickers})")
       url += '&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback='
@@ -24,7 +25,7 @@ class StockQuoteFetcher
     stock_hash["query"]["results"].each do |child|
   	 second_hash = {ticker: child.last["symbol"],
       name: child.last["Name"], 
-      last_price: BigDecimal.new(child.last["LastTradePriceOnly"]),
+      last_price: BigDecimal.new(child.last["LastTradePriceOnly"]).to_f,
       last_trade: formatted_date_time(child.last["LastTradeDate"], 
         child.last["LastTradeWithTime"]),
       stock_exchange: child.last["StockExchange"]}

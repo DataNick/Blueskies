@@ -21,5 +21,10 @@ group :development, :test do
 end
 
 group :development do
-	gem 'pry-rails'
+  gem 'pry-rails'
+end
+
+group :test do  
+  gem 'webmock', '~> 1.21'
+  gem 'vcr', '~> 2.9', '>= 2.9.3'
 end
