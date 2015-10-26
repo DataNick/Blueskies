@@ -36,6 +36,37 @@ RSpec.describe StockQuoteFetcher do
           stock_exchange: "NMS" }])
         end
       end
+
+      it "returns multiple stock objects" do
+        VCR.use_cassette("returns_multiple_data") do
+          apple = Stock.new(ticker: "APPL")
+          google = Stock.new(ticker: "GOOG")
+          tesla = Stock.new(ticker: "TSLA")
+          sqf = StockQuoteFetcher.new(apple, google, tesla)
+          expect(sqf.stock_fetch).to eq([{ 
+          ticker: "APPL",
+          name: "Appel, Inc.", 
+          last_price: BigDecimal.new("642.61"), 
+          last_trade: DateTime.new(2015, 10, 21, 4, 0, 0), 
+          stock_exchange: "NMS" 
+          },
+          {
+          ticker: "GOOG",
+          name: "Alphabet Inc.", 
+          last_price: BigDecimal.new("642.61"), 
+          last_trade: DateTime.new(2015, 10, 21, 4, 0, 0), 
+          stock_exchange: "NMS"
+          },
+          {
+          ticker: "TSLA",
+          name: "Tesla Motors", 
+          last_price: BigDecimal.new("642.61"), 
+          last_trade: DateTime.new(2015, 10, 21, 4, 0, 0), 
+          stock_exchange: "NMS" 
+          }])
+
+        end
+      end
     end
 end
 
