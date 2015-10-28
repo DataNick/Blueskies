@@ -49,7 +49,7 @@ class StockHistoryFetcher
 				date = parse_year_month_day(days_info)
 				stock_array << {
 					date: date,
-					price_day_close: BigDecimal.new("#{days_info["High"]}"),
+					day_price_close: BigDecimal.new("#{days_info["High"]}"),
 				}
 			end
 			return stock_array
