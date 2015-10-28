@@ -41,7 +41,7 @@ class StockQuoteFetcher
         {
           ticker: stock_hash["symbol"],
           name: stock_hash["Name"],
-          last_price: BigDecimal.new(stock_hash["LastTradePriceOnly"]),
+          last_price: BigDecimal.new(stock_hash["LastTradePriceOnly"]).to_f,
           last_trade: parse_last_trade_time(stock_hash),
           stock_exchange: stock_hash["StockExchange"]
         }

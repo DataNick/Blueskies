@@ -32,7 +32,7 @@ RSpec.describe StockQuoteFetcher do
           expect(sqf.stock_fetch).to eq([{ ticker: "GOOG",
           name: "Alphabet Inc.", 
           last_price: BigDecimal.new("642.61"), 
-          last_trade: DateTime.new(2015, 10, 21, 4, 0, 0), 
+          last_trade: DateTime.new(2015, 10, 21, 16, 0, 0), 
           stock_exchange: "NMS" }])
         end
       end
@@ -46,22 +46,22 @@ RSpec.describe StockQuoteFetcher do
           expect(sqf.stock_fetch).to eq([{ 
           ticker: "AAPL",
           name: "Apple Inc.", 
-          last_price: BigDecimal.new("642.61"), 
-          last_trade: DateTime.new(2015, 10, 21, 4, 0, 0), 
+          last_price: BigDecimal.new("116.71"), 
+          last_trade: DateTime.new(2015, 10, 28, 11, 0, 0), 
           stock_exchange: "NMS" 
           },
           {
           ticker: "GOOG",
           name: "Alphabet Inc.", 
-          last_price: BigDecimal.new("642.61"), 
-          last_trade: DateTime.new(2015, 10, 21, 4, 0, 0), 
+          last_price: BigDecimal.new("709.9275"), 
+          last_trade: DateTime.new(2015, 10, 28, 11, 0, 0), 
           stock_exchange: "NMS"
           },
           {
           ticker: "TSLA",
           name: "Tesla Motors, Inc.", 
-          last_price: BigDecimal.new("642.61"), 
-          last_trade: DateTime.new(2015, 10, 21, 4, 0, 0), 
+          last_price: BigDecimal.new("212.61"), 
+          last_trade: DateTime.new(2015, 10, 28, 11, 0, 0), 
           stock_exchange: "NMS" 
           }])
 
