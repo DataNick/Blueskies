@@ -2,6 +2,7 @@ require './lib/stock_quote_fetcher/stock_quote_fetcher.rb'
 
 class Stock < ActiveRecord::Base
 	has_many :historical_prices
+  has_many :portfolios
 
 
   def self.test

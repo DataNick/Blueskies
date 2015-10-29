@@ -11,8 +11,8 @@ RSpec.describe StockHistoryFetcher, type: :model do
 		    expect(message.class).to eq(Hash)
 		    expect(message[stock.ticker].first).to eq(
 		    {
-		    	date:  DateTime.new(2015,10,27),
-		    	day_price_close: BigDecimal.new("713.619995")
+		    	date:  DateTime.new(2015,10,28),
+		    	day_price_close: BigDecimal.new("712.97998")
 		    	})
 		    expect(message[stock.ticker].count).to eq(65)
   		end

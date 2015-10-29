@@ -8,7 +8,6 @@ class StockQuoteFetcher
   def stock_fetch
     yahoo_tickers = @stocks.map {|x| "'" + x.ticker + "'"}.join(', ')
     if yahoo_tickers.length > 0
-      puts "fetching data from yahoo api..."
       url = 'https://query.yahooapis.com/v1/public/yql?q='
       url += URI.encode("SELECT * FROM yahoo.finance.quotes WHERE symbol IN (#{yahoo_tickers})")
       url += '&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback='
