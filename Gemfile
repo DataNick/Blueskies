@@ -21,14 +21,13 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
   gem 'rspec-rails', '~> 3.0'
+  gem 'pry-rails'
 end
 
 group :development do
-  gem 'pry-rails'
 end
 
 group :test do  
   gem 'webmock', '~> 1.21'
   gem 'vcr', '~> 2.9', '>= 2.9.3'
-  gem 'pry-rails'
 end
