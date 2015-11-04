@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://query.yahooapis.com/v1/public/yql?callback=&diagnostics=true&env=store://datatables.org/alltableswithkeys&format=json&q=SELECT%20*%20FROM%20yahoo.finance.quotes%20WHERE%20symbol%20IN%20('APPL',%20'GOOG',%20'TSLA')
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Yql-Host:
+      - pprd1-node600-lh3.manhattan.bf1.yahoo.com
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      Cache-Control:
+      - no-cache
+      Date:
+      - Wed, 28 Oct 2015 01:46:17 GMT
+      Age:
+      - '0'
+      Server:
+      - ATS
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"query":{"count":3,"created":"2015-10-28T01:46:17Z","lang":"en-US","diagnostics":{"url":[{"execution-start-time":"0","execution-stop-time":"2","execution-time":"2","content":"http://www.datatables.org/yahoo/finance/yahoo.finance.quotes.xml"},{"execution-start-time":"6","execution-stop-time":"18","execution-time":"12","content":"http://download.finance.yahoo.com/d/quotes.csv?f=aa2bb2b3b4cc1c3c4c6c8dd1d2ee1e7e8e9ghjkg1g3g4g5g6ii5j1j3j4j5j6k1k2k4k5ll1l2l3mm2m3m4m5m6m7m8nn4opp1p2p5p6qrr1r2r5r6r7ss1s7t1t7t8vv1v7ww1w4xy&s=APPL,GOOG,TSLA"}],"publiclyCallable":"true","cache":{"execution-start-time":"5","execution-stop-time":"5","execution-time":"0","method":"GET","type":"MEMCACHED","content":"5d1e1de680846a307c9874dc3d6878dc"},"query":{"execution-start-time":"6","execution-stop-time":"19","execution-time":"13","params":"{url=[http://download.finance.yahoo.com/d/quotes.csv?f=aa2bb2b3b4cc1c3c4c6c8dd1d2ee1e7e8e9ghjkg1g3g4g5g6ii5j1j3j4j5j6k1k2k4k5ll1l2l3mm2m3m4m5m6m7m8nn4opp1p2p5p6qrr1r2r5r6r7ss1s7t1t7t8vv1v7ww1w4xy&s=APPL,GOOG,TSLA]}","content":"select
+        * from csv where url=@url and columns=''Ask,AverageDailyVolume,Bid,AskRealtime,BidRealtime,BookValue,Change&PercentChange,Change,Commission,Currency,ChangeRealtime,AfterHoursChangeRealtime,DividendShare,LastTradeDate,TradeDate,EarningsShare,ErrorIndicationreturnedforsymbolchangedinvalid,EPSEstimateCurrentYear,EPSEstimateNextYear,EPSEstimateNextQuarter,DaysLow,DaysHigh,YearLow,YearHigh,HoldingsGainPercent,AnnualizedGain,HoldingsGain,HoldingsGainPercentRealtime,HoldingsGainRealtime,MoreInfo,OrderBookRealtime,MarketCapitalization,MarketCapRealtime,EBITDA,ChangeFromYearLow,PercentChangeFromYearLow,LastTradeRealtimeWithTime,ChangePercentRealtime,ChangeFromYearHigh,PercebtChangeFromYearHigh,LastTradeWithTime,LastTradePriceOnly,HighLimit,LowLimit,DaysRange,DaysRangeRealtime,FiftydayMovingAverage,TwoHundreddayMovingAverage,ChangeFromTwoHundreddayMovingAverage,PercentChangeFromTwoHundreddayMovingAverage,ChangeFromFiftydayMovingAverage,PercentChangeFromFiftydayMovingAverage,Name,Notes,Open,PreviousClose,PricePaid,ChangeinPercent,PriceSales,PriceBook,ExDividendDate,PERatio,DividendPayDate,PERatioRealtime,PEGRatio,PriceEPSEstimateCurrentYear,PriceEPSEstimateNextYear,Symbol,SharesOwned,ShortRatio,LastTradeTime,TickerTrend,OneyrTargetPrice,Volume,HoldingsValue,HoldingsValueRealtime,YearRange,DaysValueChange,DaysValueChangeRealtime,StockExchange,DividendYield''"},"javascript":{"execution-start-time":"4","execution-stop-time":"44","execution-time":"40","instructions-used":"177798","table-name":"yahoo.finance.quotes"},"user-time":"45","service-time":"14","build-version":"0.2.292"},"results":{"quote":[{"symbol":"APPL","Ask":null,"AverageDailyVolume":null,"Bid":null,"AskRealtime":null,"BidRealtime":null,"BookValue":"0.00","Change_PercentChange":"+0.00
+        - +0.00%","Change":"+0.00","Commission":null,"Currency":"USD","ChangeRealtime":null,"AfterHoursChangeRealtime":null,"DividendShare":null,"LastTradeDate":null,"TradeDate":null,"EarningsShare":null,"ErrorIndicationreturnedforsymbolchangedinvalid":null,"EPSEstimateCurrentYear":null,"EPSEstimateNextYear":null,"EPSEstimateNextQuarter":"0.00","DaysLow":null,"DaysHigh":null,"YearLow":null,"YearHigh":null,"HoldingsGainPercent":null,"AnnualizedGain":null,"HoldingsGain":null,"HoldingsGainPercentRealtime":null,"HoldingsGainRealtime":null,"MoreInfo":null,"OrderBookRealtime":null,"MarketCapitalization":null,"MarketCapRealtime":null,"EBITDA":"0.00","ChangeFromYearLow":null,"PercentChangeFromYearLow":null,"LastTradeRealtimeWithTime":null,"ChangePercentRealtime":null,"ChangeFromYearHigh":null,"PercebtChangeFromYearHigh":null,"LastTradeWithTime":null,"LastTradePriceOnly":"96.11","HighLimit":null,"LowLimit":null,"DaysRange":null,"DaysRangeRealtime":null,"FiftydayMovingAverage":"0.00","TwoHundreddayMovingAverage":"0.00","ChangeFromTwoHundreddayMovingAverage":"96.11","PercentChangeFromTwoHundreddayMovingAverage":"+inf%","ChangeFromFiftydayMovingAverage":"96.11","PercentChangeFromFiftydayMovingAverage":"+inf%","Name":"APPELL
+        PETE CORP","Notes":null,"Open":null,"PreviousClose":"96.11","PricePaid":null,"ChangeinPercent":"+0.00%","PriceSales":null,"PriceBook":null,"ExDividendDate":null,"PERatio":null,"DividendPayDate":null,"PERatioRealtime":null,"PEGRatio":"0.00","PriceEPSEstimateCurrentYear":null,"PriceEPSEstimateNextYear":null,"Symbol":"APPL","SharesOwned":null,"ShortRatio":"0.00","LastTradeTime":null,"TickerTrend":null,"OneyrTargetPrice":null,"Volume":"0","HoldingsValue":null,"HoldingsValueRealtime":null,"YearRange":null,"DaysValueChange":null,"DaysValueChangeRealtime":null,"StockExchange":"PNK","DividendYield":null,"PercentChange":"+0.00%"},{"symbol":"GOOG","Ask":"709.00","AverageDailyVolume":"2335530","Bid":"707.00","AskRealtime":null,"BidRealtime":null,"BookValue":"169.03","Change_PercentChange":"-4.29
+        - -0.60%","Change":"-4.29","Commission":null,"Currency":"USD","ChangeRealtime":null,"AfterHoursChangeRealtime":null,"DividendShare":null,"LastTradeDate":"10/27/2015","TradeDate":null,"EarningsShare":"23.69","ErrorIndicationreturnedforsymbolchangedinvalid":null,"EPSEstimateCurrentYear":"28.97","EPSEstimateNextYear":"34.15","EPSEstimateNextQuarter":"7.78","DaysLow":"704.55","DaysHigh":"713.62","YearLow":"486.23","YearHigh":"730.00","HoldingsGainPercent":null,"AnnualizedGain":null,"HoldingsGain":null,"HoldingsGainPercentRealtime":null,"HoldingsGainRealtime":null,"MoreInfo":null,"OrderBookRealtime":null,"MarketCapitalization":"487.22B","MarketCapRealtime":null,"EBITDA":"23.31B","ChangeFromYearLow":"222.26","PercentChangeFromYearLow":"+45.71%","LastTradeRealtimeWithTime":null,"ChangePercentRealtime":null,"ChangeFromYearHigh":"-21.51","PercebtChangeFromYearHigh":"-2.95%","LastTradeWithTime":"3:59pm
+        - <b>708.49</b>","LastTradePriceOnly":"708.49","HighLimit":null,"LowLimit":null,"DaysRange":"704.55
+        - 713.62","DaysRangeRealtime":null,"FiftydayMovingAverage":"639.33","TwoHundreddayMovingAverage":"588.35","ChangeFromTwoHundreddayMovingAverage":"120.14","PercentChangeFromTwoHundreddayMovingAverage":"+20.42%","ChangeFromFiftydayMovingAverage":"69.16","PercentChangeFromFiftydayMovingAverage":"+10.82%","Name":"Alphabet
+        Inc.","Notes":null,"Open":"707.38","PreviousClose":"712.78","PricePaid":null,"ChangeinPercent":"-0.60%","PriceSales":"6.83","PriceBook":"4.22","ExDividendDate":null,"PERatio":"29.90","DividendPayDate":null,"PERatioRealtime":null,"PEGRatio":"1.46","PriceEPSEstimateCurrentYear":"24.46","PriceEPSEstimateNextYear":"20.75","Symbol":"GOOG","SharesOwned":null,"ShortRatio":"2.20","LastTradeTime":"3:59pm","TickerTrend":null,"OneyrTargetPrice":"853.67","Volume":"2245796","HoldingsValue":null,"HoldingsValueRealtime":null,"YearRange":"486.23
+        - 730.00","DaysValueChange":null,"DaysValueChangeRealtime":null,"StockExchange":"NMS","DividendYield":null,"PercentChange":"-0.60%"},{"symbol":"TSLA","Ask":"210.49","AverageDailyVolume":"4588970","Bid":"209.50","AskRealtime":null,"BidRealtime":null,"BookValue":"5.63","Change_PercentChange":"-4.91
+        - -2.28%","Change":"-4.91","Commission":null,"Currency":"USD","ChangeRealtime":null,"AfterHoursChangeRealtime":null,"DividendShare":null,"LastTradeDate":"10/27/2015","TradeDate":null,"EarningsShare":"-4.14","ErrorIndicationreturnedforsymbolchangedinvalid":null,"EPSEstimateCurrentYear":"-0.88","EPSEstimateNextYear":"2.22","EPSEstimateNextQuarter":"0.37","DaysLow":"207.51","DaysHigh":"217.10","YearLow":"181.40","YearHigh":"286.65","HoldingsGainPercent":null,"AnnualizedGain":null,"HoldingsGain":null,"HoldingsGainPercentRealtime":null,"HoldingsGainRealtime":null,"MoreInfo":null,"OrderBookRealtime":null,"MarketCapitalization":"26.74B","MarketCapRealtime":null,"EBITDA":"-85.15M","ChangeFromYearLow":"28.95","PercentChangeFromYearLow":"+15.96%","LastTradeRealtimeWithTime":null,"ChangePercentRealtime":null,"ChangeFromYearHigh":"-76.30","PercebtChangeFromYearHigh":"-26.62%","LastTradeWithTime":"4:00pm
+        - <b>210.35</b>","LastTradePriceOnly":"210.35","HighLimit":null,"LowLimit":null,"DaysRange":"207.51
+        - 217.10","DaysRangeRealtime":null,"FiftydayMovingAverage":"238.59","TwoHundreddayMovingAverage":"245.27","ChangeFromTwoHundreddayMovingAverage":"-34.92","PercentChangeFromTwoHundreddayMovingAverage":"-14.24%","ChangeFromFiftydayMovingAverage":"-28.24","PercentChangeFromFiftydayMovingAverage":"-11.84%","Name":"Tesla
+        Motors, Inc.","Notes":null,"Open":"214.84","PreviousClose":"215.26","PricePaid":null,"ChangeinPercent":"-2.28%","PriceSales":"7.39","PriceBook":"38.21","ExDividendDate":null,"PERatio":null,"DividendPayDate":null,"PERatioRealtime":null,"PEGRatio":"-2.38","PriceEPSEstimateCurrentYear":null,"PriceEPSEstimateNextYear":"94.75","Symbol":"TSLA","SharesOwned":null,"ShortRatio":"6.62","LastTradeTime":"4:00pm","TickerTrend":null,"OneyrTargetPrice":"290.44","Volume":"3519449","HoldingsValue":null,"HoldingsValueRealtime":null,"YearRange":"181.40
+        - 286.65","DaysValueChange":null,"DaysValueChangeRealtime":null,"StockExchange":"NMS","DividendYield":null,"PercentChange":"-2.28%"}]}}}'
+    http_version: 
+  recorded_at: Wed, 28 Oct 2015 01:46:17 GMT
+- request:
+    method: get
+    uri: https://query.yahooapis.com/v1/public/yql?callback=&diagnostics=true&env=store://datatables.org/alltableswithkeys&format=json&q=SELECT%20*%20FROM%20yahoo.finance.quotes%20WHERE%20symbol%20IN%20('AAPL',%20'GOOG',%20'TSLA')
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Yql-Host:
+      - pprd1-node597-lh1.manhattan.bf1.yahoo.com
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      Cache-Control:
+      - no-cache
+      Date:
+      - Wed, 28 Oct 2015 02:20:32 GMT
+      Age:
+      - '0'
+      Server:
+      - ATS
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"query":{"count":3,"created":"2015-10-28T02:20:32Z","lang":"en-US","diagnostics":{"url":[{"execution-start-time":"0","execution-stop-time":"2","execution-time":"2","content":"http://www.datatables.org/yahoo/finance/yahoo.finance.quotes.xml"},{"execution-start-time":"6","execution-stop-time":"14","execution-time":"8","content":"http://download.finance.yahoo.com/d/quotes.csv?f=aa2bb2b3b4cc1c3c4c6c8dd1d2ee1e7e8e9ghjkg1g3g4g5g6ii5j1j3j4j5j6k1k2k4k5ll1l2l3mm2m3m4m5m6m7m8nn4opp1p2p5p6qrr1r2r5r6r7ss1s7t1t7t8vv1v7ww1w4xy&s=AAPL,GOOG,TSLA"}],"publiclyCallable":"true","cache":{"execution-start-time":"5","execution-stop-time":"5","execution-time":"0","method":"GET","type":"MEMCACHED","content":"5d1e1de680846a307c9874dc3d6878dc"},"query":{"execution-start-time":"5","execution-stop-time":"15","execution-time":"10","params":"{url=[http://download.finance.yahoo.com/d/quotes.csv?f=aa2bb2b3b4cc1c3c4c6c8dd1d2ee1e7e8e9ghjkg1g3g4g5g6ii5j1j3j4j5j6k1k2k4k5ll1l2l3mm2m3m4m5m6m7m8nn4opp1p2p5p6qrr1r2r5r6r7ss1s7t1t7t8vv1v7ww1w4xy&s=AAPL,GOOG,TSLA]}","content":"select
+        * from csv where url=@url and columns=''Ask,AverageDailyVolume,Bid,AskRealtime,BidRealtime,BookValue,Change&PercentChange,Change,Commission,Currency,ChangeRealtime,AfterHoursChangeRealtime,DividendShare,LastTradeDate,TradeDate,EarningsShare,ErrorIndicationreturnedforsymbolchangedinvalid,EPSEstimateCurrentYear,EPSEstimateNextYear,EPSEstimateNextQuarter,DaysLow,DaysHigh,YearLow,YearHigh,HoldingsGainPercent,AnnualizedGain,HoldingsGain,HoldingsGainPercentRealtime,HoldingsGainRealtime,MoreInfo,OrderBookRealtime,MarketCapitalization,MarketCapRealtime,EBITDA,ChangeFromYearLow,PercentChangeFromYearLow,LastTradeRealtimeWithTime,ChangePercentRealtime,ChangeFromYearHigh,PercebtChangeFromYearHigh,LastTradeWithTime,LastTradePriceOnly,HighLimit,LowLimit,DaysRange,DaysRangeRealtime,FiftydayMovingAverage,TwoHundreddayMovingAverage,ChangeFromTwoHundreddayMovingAverage,PercentChangeFromTwoHundreddayMovingAverage,ChangeFromFiftydayMovingAverage,PercentChangeFromFiftydayMovingAverage,Name,Notes,Open,PreviousClose,PricePaid,ChangeinPercent,PriceSales,PriceBook,ExDividendDate,PERatio,DividendPayDate,PERatioRealtime,PEGRatio,PriceEPSEstimateCurrentYear,PriceEPSEstimateNextYear,Symbol,SharesOwned,ShortRatio,LastTradeTime,TickerTrend,OneyrTargetPrice,Volume,HoldingsValue,HoldingsValueRealtime,YearRange,DaysValueChange,DaysValueChangeRealtime,StockExchange,DividendYield''"},"javascript":{"execution-start-time":"4","execution-stop-time":"42","execution-time":"37","instructions-used":"187616","table-name":"yahoo.finance.quotes"},"user-time":"43","service-time":"10","build-version":"0.2.292"},"results":{"quote":[{"symbol":"AAPL","Ask":"115.30","AverageDailyVolume":"59580300","Bid":"115.25","AskRealtime":null,"BidRealtime":null,"BookValue":"22.03","Change_PercentChange":"-0.73
+        - -0.63%","Change":"-0.73","Commission":null,"Currency":"USD","ChangeRealtime":null,"AfterHoursChangeRealtime":null,"DividendShare":"2.08","LastTradeDate":"10/27/2015","TradeDate":null,"EarningsShare":"8.65","ErrorIndicationreturnedforsymbolchangedinvalid":null,"EPSEstimateCurrentYear":"9.13","EPSEstimateNextYear":"9.80","EPSEstimateNextQuarter":"3.22","DaysLow":"113.99","DaysHigh":"116.54","YearLow":"92.00","YearHigh":"134.54","HoldingsGainPercent":null,"AnnualizedGain":null,"HoldingsGain":null,"HoldingsGainPercentRealtime":null,"HoldingsGainRealtime":null,"MoreInfo":null,"OrderBookRealtime":null,"MarketCapitalization":"653.25B","MarketCapRealtime":null,"EBITDA":"77.88B","ChangeFromYearLow":"22.55","PercentChangeFromYearLow":"+24.51%","LastTradeRealtimeWithTime":null,"ChangePercentRealtime":null,"ChangeFromYearHigh":"-19.99","PercebtChangeFromYearHigh":"-14.86%","LastTradeWithTime":"4:00pm
+        - <b>114.55</b>","LastTradePriceOnly":"114.55","HighLimit":null,"LowLimit":null,"DaysRange":"113.99
+        - 116.54","DaysRangeRealtime":null,"FiftydayMovingAverage":"112.88","TwoHundreddayMovingAverage":"121.01","ChangeFromTwoHundreddayMovingAverage":"-6.46","PercentChangeFromTwoHundreddayMovingAverage":"-5.34%","ChangeFromFiftydayMovingAverage":"1.67","PercentChangeFromFiftydayMovingAverage":"+1.48%","Name":"Apple
+        Inc.","Notes":null,"Open":"115.46","PreviousClose":"115.28","PricePaid":null,"ChangeinPercent":"-0.63%","PriceSales":"2.93","PriceBook":"5.23","ExDividendDate":"8/6/2015","PERatio":"13.25","DividendPayDate":"8/13/2015","PERatioRealtime":null,"PEGRatio":"0.73","PriceEPSEstimateCurrentYear":"12.55","PriceEPSEstimateNextYear":"11.69","Symbol":"AAPL","SharesOwned":null,"ShortRatio":"1.52","LastTradeTime":"4:00pm","TickerTrend":null,"OneyrTargetPrice":"148.63","Volume":"69884400","HoldingsValue":null,"HoldingsValueRealtime":null,"YearRange":"92.00
+        - 134.54","DaysValueChange":null,"DaysValueChangeRealtime":null,"StockExchange":"NMS","DividendYield":"1.75","PercentChange":"-0.63%"},{"symbol":"GOOG","Ask":"709.00","AverageDailyVolume":"2335530","Bid":"707.00","AskRealtime":null,"BidRealtime":null,"BookValue":"169.03","Change_PercentChange":"-4.29
+        - -0.60%","Change":"-4.29","Commission":null,"Currency":"USD","ChangeRealtime":null,"AfterHoursChangeRealtime":null,"DividendShare":null,"LastTradeDate":"10/27/2015","TradeDate":null,"EarningsShare":"23.69","ErrorIndicationreturnedforsymbolchangedinvalid":null,"EPSEstimateCurrentYear":"28.97","EPSEstimateNextYear":"34.15","EPSEstimateNextQuarter":"7.78","DaysLow":"704.55","DaysHigh":"713.62","YearLow":"486.23","YearHigh":"730.00","HoldingsGainPercent":null,"AnnualizedGain":null,"HoldingsGain":null,"HoldingsGainPercentRealtime":null,"HoldingsGainRealtime":null,"MoreInfo":null,"OrderBookRealtime":null,"MarketCapitalization":"487.22B","MarketCapRealtime":null,"EBITDA":"23.31B","ChangeFromYearLow":"222.26","PercentChangeFromYearLow":"+45.71%","LastTradeRealtimeWithTime":null,"ChangePercentRealtime":null,"ChangeFromYearHigh":"-21.51","PercebtChangeFromYearHigh":"-2.95%","LastTradeWithTime":"3:59pm
+        - <b>708.49</b>","LastTradePriceOnly":"708.49","HighLimit":null,"LowLimit":null,"DaysRange":"704.55
+        - 713.62","DaysRangeRealtime":null,"FiftydayMovingAverage":"639.33","TwoHundreddayMovingAverage":"588.35","ChangeFromTwoHundreddayMovingAverage":"120.14","PercentChangeFromTwoHundreddayMovingAverage":"+20.42%","ChangeFromFiftydayMovingAverage":"69.16","PercentChangeFromFiftydayMovingAverage":"+10.82%","Name":"Alphabet
+        Inc.","Notes":null,"Open":"707.38","PreviousClose":"712.78","PricePaid":null,"ChangeinPercent":"-0.60%","PriceSales":"6.83","PriceBook":"4.22","ExDividendDate":null,"PERatio":"29.90","DividendPayDate":null,"PERatioRealtime":null,"PEGRatio":"1.46","PriceEPSEstimateCurrentYear":"24.46","PriceEPSEstimateNextYear":"20.75","Symbol":"GOOG","SharesOwned":null,"ShortRatio":"2.20","LastTradeTime":"3:59pm","TickerTrend":null,"OneyrTargetPrice":"853.67","Volume":"2245796","HoldingsValue":null,"HoldingsValueRealtime":null,"YearRange":"486.23
+        - 730.00","DaysValueChange":null,"DaysValueChangeRealtime":null,"StockExchange":"NMS","DividendYield":null,"PercentChange":"-0.60%"},{"symbol":"TSLA","Ask":"210.49","AverageDailyVolume":"4588970","Bid":"209.50","AskRealtime":null,"BidRealtime":null,"BookValue":"5.63","Change_PercentChange":"-4.91
+        - -2.28%","Change":"-4.91","Commission":null,"Currency":"USD","ChangeRealtime":null,"AfterHoursChangeRealtime":null,"DividendShare":null,"LastTradeDate":"10/27/2015","TradeDate":null,"EarningsShare":"-4.14","ErrorIndicationreturnedforsymbolchangedinvalid":null,"EPSEstimateCurrentYear":"-0.88","EPSEstimateNextYear":"2.22","EPSEstimateNextQuarter":"0.37","DaysLow":"207.51","DaysHigh":"217.10","YearLow":"181.40","YearHigh":"286.65","HoldingsGainPercent":null,"AnnualizedGain":null,"HoldingsGain":null,"HoldingsGainPercentRealtime":null,"HoldingsGainRealtime":null,"MoreInfo":null,"OrderBookRealtime":null,"MarketCapitalization":"26.74B","MarketCapRealtime":null,"EBITDA":"-85.15M","ChangeFromYearLow":"28.95","PercentChangeFromYearLow":"+15.96%","LastTradeRealtimeWithTime":null,"ChangePercentRealtime":null,"ChangeFromYearHigh":"-76.30","PercebtChangeFromYearHigh":"-26.62%","LastTradeWithTime":"4:00pm
+        - <b>210.35</b>","LastTradePriceOnly":"210.35","HighLimit":null,"LowLimit":null,"DaysRange":"207.51
+        - 217.10","DaysRangeRealtime":null,"FiftydayMovingAverage":"238.59","TwoHundreddayMovingAverage":"245.27","ChangeFromTwoHundreddayMovingAverage":"-34.92","PercentChangeFromTwoHundreddayMovingAverage":"-14.24%","ChangeFromFiftydayMovingAverage":"-28.24","PercentChangeFromFiftydayMovingAverage":"-11.84%","Name":"Tesla
+        Motors, Inc.","Notes":null,"Open":"214.84","PreviousClose":"215.26","PricePaid":null,"ChangeinPercent":"-2.28%","PriceSales":"7.39","PriceBook":"38.21","ExDividendDate":null,"PERatio":null,"DividendPayDate":null,"PERatioRealtime":null,"PEGRatio":"-2.38","PriceEPSEstimateCurrentYear":null,"PriceEPSEstimateNextYear":"94.75","Symbol":"TSLA","SharesOwned":null,"ShortRatio":"6.62","LastTradeTime":"4:00pm","TickerTrend":null,"OneyrTargetPrice":"290.44","Volume":"3519449","HoldingsValue":null,"HoldingsValueRealtime":null,"YearRange":"181.40
+        - 286.65","DaysValueChange":null,"DaysValueChangeRealtime":null,"StockExchange":"NMS","DividendYield":null,"PercentChange":"-2.28%"}]}}}'
+    http_version: 
+  recorded_at: Wed, 28 Oct 2015 02:20:32 GMT
+recorded_with: VCR 2.9.3
