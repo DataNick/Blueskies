@@ -8,7 +8,6 @@ RSpec.describe Stock, type: :model do
 	describe "correctly updates stock values" do
 		stock = Stock.create(ticker: "GOOG")
 		stock.today_price
-	
 	end
 
 	# describe "stock_quote_fetcher new method" do

@@ -28,6 +28,7 @@ require 'webmock/rspec'
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
 
   VCR.configure do |c|
     # c.allow_http_connections_when_no_cassette = true

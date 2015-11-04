@@ -17,6 +17,8 @@ RSpec.describe User, type: :model do
       expect(@user).not_to be_valid
     end
 
+
+
     # it "should have a portfolio" do
     #   @user = User.new
     #   @user.id = 1

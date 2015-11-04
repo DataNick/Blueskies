@@ -2,7 +2,8 @@ require './lib/stock_quote_fetcher/stock_quote_fetcher.rb'
 
 class Stock < ActiveRecord::Base
 	has_many :historical_prices
-  has_many :portfolios
+  has_many :portfolios, through: :portfolio_stock
+  has_many :portfolio_stocks
 
 
   def self.test
@@ -20,3 +21,12 @@ class Stock < ActiveRecord::Base
   end
 
 end
+
+
+  # miss = []
+  # 0.upto(url.length) do |x|
+  #   miss << x if url[x] != yahoo_string[x]
+  # end
+  # puts miss
+
+
