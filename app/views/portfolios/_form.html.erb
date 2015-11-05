@@ -26,8 +26,13 @@
   </div>
 
   <div class = "field">
-    <%= f.collection_select :id, @stocks, :id, :name %>
+    <%= f.fields_for :stocks do |stock|  %>
+    <li>
+      <%= stock.collection_select :id, @stocks, :id, :name %>
+    </li>
+    <% end %>
   </div>
+  
   <div class = "actions">
     <%= f.submit %>
   </div>

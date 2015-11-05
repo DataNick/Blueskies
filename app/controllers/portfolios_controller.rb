@@ -6,6 +6,7 @@ class PortfoliosController < ApplicationController
 
 	def new
     @portfolio = Portfolio.new
+    @portfolio.stocks.build
     @stocks = Stock.all
   end
 
