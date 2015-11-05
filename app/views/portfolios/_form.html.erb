@@ -1,0 +1,31 @@
+<%= form_for @portfolio do |f| %>
+
+  <% if @portfolio.errors.any? %>
+
+  <h3><%= pluralize(@portfolio.errors.count, "error") %> prevented this portfolio from being created:</h3>
+
+  <ul>
+    <%= @portfolio.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+
+  <% end %>
+
+  <div class = "field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class = "field">
+    <%= f.label :cash %>
+    <%= f.text_field :cash, :class => 'cash', :value => (number_with_precision(f.object.cash, :precision => 2) || 0) %>
+  </div>
+  <div class = "field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class = "actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
