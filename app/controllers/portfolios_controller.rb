@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
 	before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, only: [:new]
 
   def show
 	end
@@ -24,8 +25,8 @@ class PortfoliosController < ApplicationController
 	def create
     @portfolio = current_user.portfolios.build(portfolio_params)
     @portfolio.user_id = current_user.id
-    if portfolio.save
-      respond_with(@portfolio)
+    if @portfolio.save
+      redirect_to portfolio_path(@portfolio)
     else
       render :new
     end
