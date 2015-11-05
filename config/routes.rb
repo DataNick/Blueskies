@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'welcome#index'
+  # root 'welcome#index'
 
   resources :portfolios, only: [:show, :update, :new, :create]
 end

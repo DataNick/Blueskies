@@ -6,10 +6,12 @@ class PortfoliosController < ApplicationController
 
 	def new
     @portfolio = Portfolio.new
-    @portfolio.portfolio_stock.new
-	end
+    @stocks = Stock.all
+  end
 
-	def update
+  def update
+    # @portfolio = Portfolio
+    @portfolio.portfolio_stocks.new
 	end
 
   def edit
