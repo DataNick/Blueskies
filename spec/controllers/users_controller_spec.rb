@@ -26,3 +26,37 @@ end
 
 end
 
+RSpec.describe Users::RegistrationsController, type: :controller do
+
+  controller do
+    def after_sign_up_path_for(resource)
+      super resource
+    end
+  end
+
+  describe "User sign_up" do
+
+
+    it "Sign up current_user" do
+      request.env['devise.mapping'] = Devise.mappings[:user]
+      post :create, user: FactoryGirl.attributes_for(:user)
+      # expect( controller.after_sign_up_path_for(:user)) == { :get => "/" }
+    end
+
+
+    it "blocks unauthenticated access" do
+      sign_in nil
+
+      expect(response) ==  { :get => 'devise/registrations#new' }
+    end
+
+    it "allows authenticated access" do
+      sign_in
+
+      { :get => "/"}
+
+      expect(response).to be_success
+    end
+  end
+end
+
